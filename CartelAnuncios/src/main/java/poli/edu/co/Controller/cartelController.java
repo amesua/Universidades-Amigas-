@@ -1,4 +1,4 @@
-package Controller;
+package poli.edu.co.Controller;
 
 import java.util.List;
 
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import Model.Cartel;
+import poli.edu.co.Model.Cartel;
 
 @RestController 
 @RequestMapping("/api/v1/")
 public class cartelController {
 
 	@Autowired
-	Repository.cartelRepository cartelRepository;
+	poli.edu.co.Repository.cartelRepository cartelRepository;
 	
 	@GetMapping("/Carteles")
 	public List<Cartel> getAllCarteles(){

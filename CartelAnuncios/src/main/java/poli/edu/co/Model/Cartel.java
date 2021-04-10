@@ -1,4 +1,4 @@
-package Model;
+package poli.edu.co.Model;
 
 import java.util.Date;
 
