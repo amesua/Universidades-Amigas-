@@ -3,6 +3,7 @@ package poli.edu.co.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import poli.edu.co.Model.Cartel;
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController 
 @RequestMapping("/api/v1/")
 public class cartelController {
@@ -47,14 +48,14 @@ public class cartelController {
 	}
 	//Query
 		@GetMapping("/CustomersQ1/{lastname}")
-		public List<Cartel> findCustomers1(@PathVariable String nombreEvento){
+		public List<Cartel> findCarteles1(@PathVariable String nombreEvento){
 			return cartelRepository.findCartelesQ1(nombreEvento);
 		}
 
 		//Query
 		/*@GetMapping("/CustomersQ2")
-		public List<Cartel> findCustomers2(){
-			return cartelRepository.findCustomersQ2();
+		public List<Cartel> findCarteles2(){
+			return cartelRepository.findCartelesQ2();
 		}*/
 	
 	

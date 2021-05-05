@@ -13,7 +13,7 @@ public interface cartelRepository extends MongoRepository<Cartel, String> {
 	List<Cartel> findCartelesQ1(String nombreEvento);
 	
 	/*@Query(value="{}", fields= "{_id:0, nombreEvento:1, detalleEvento:1}")
-	List<Cartel> findCustomersQ2();
+	List<Cartel> findCartelesQ2();
 	*/
 
 }
