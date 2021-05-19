@@ -47,7 +47,7 @@ public class cartelController {
 		return cartel;
 	}
 	//Query
-		@GetMapping("/CustomersQ1/{lastname}")
+		@GetMapping("/CartelesQ1/{lastname}")
 		public List<Cartel> findCarteles1(@PathVariable String nombreEvento){
 			return cartelRepository.findCartelesQ1(nombreEvento);
 		}
